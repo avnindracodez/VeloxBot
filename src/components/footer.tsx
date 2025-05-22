@@ -8,9 +8,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-botBlue to-botBlue-dark"></div>
+              <img src="/logo.png" alt="Velox Bot Logo" className="h-8 w-8 rounded-full" />
               <h3 className="font-poppins font-bold text-xl">
-                Discord Bot
+                Velox Bot
               </h3>
             </div>
             <p className="text-muted-foreground">
@@ -84,13 +84,13 @@ export function Footer() {
         
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground">
-            &copy; {new Date().getFullYear()} Discord Bot - All In One. All rights reserved.
+            &copy; {new Date().getFullYear()} Velox Bot. All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://discord.gg/faststudios" className="text-muted-foreground hover:text-foreground transition-colors">
               Discord
             </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://github.com/AviDaddyCodez" className="text-muted-foreground hover:text-foreground transition-colors">
               GitHub
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">

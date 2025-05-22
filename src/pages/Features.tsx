@@ -100,7 +100,7 @@ const Features = () => {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Discord Bot - All In One combines everything you need to create the perfect Discord community in one easy-to-use bot.
+              Velox Bot combines everything you need to create the perfect Discord community in one easy-to-use bot.
             </p>
           </div>
         </div>
@@ -152,12 +152,10 @@ const Features = () => {
                     </div>
                     <div className="p-4 bg-gray-800 text-white">
                       <div className="flex items-start gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-full bg-botBlue flex items-center justify-center">
-                          <Bot className="w-6 h-6" />
-                        </div>
+<img src="/logo.png" alt="Velox Bot Logo" className="h-8 w-8 rounded-full" />
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="font-semibold text-botBlue">Discord Bot</span>
+                            <span className="font-semibold text-botBlack">Velox Bot</span>
                             <span className="text-xs text-gray-400">Today at 12:30 PM</span>
                           </div>
                           <div className="mt-1 text-sm">
@@ -195,12 +193,12 @@ const Features = () => {
               Ready to elevate your Discord server? Add our bot for free and unlock all premium features.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
+              <a href="https://discord.com/oauth2/authorize?client_id=1373572495013052468&permissions=8&integration_type=0&scope=bot"><Button
                 size="lg"
                 className="bg-gradient-to-r from-botBlue to-botBlue-dark text-white font-medium shadow-lg shadow-botBlue/25 btn-glow"
               >
                 Add to Discord
-              </Button>
+              </Button></a>
               <Button
                 size="lg" 
                 variant="outline"

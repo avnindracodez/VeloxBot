@@ -31,7 +31,7 @@ const Support = () => {
     },
     {
       question: "Can I use the bot in multiple servers?",
-      answer: "Yes, you can add Discord Bot - All In One to as many servers as you like. Each server will have its own separate configuration and settings.",
+      answer: "Yes, you can add Velox Bot to as many servers as you like. Each server will have its own separate configuration and settings.",
     },
     {
       question: "Is there a premium version of the bot?",
@@ -107,11 +107,11 @@ const Support = () => {
               <p className="text-muted-foreground mb-6 flex-grow">
                 Join our community support server to get help from other users and our support team.
               </p>
-              <Button
+              <a href="https://discord.gg/faststudios" target="_blank" rel="noopener noreferrer"><Button
                 className="bg-gradient-to-r from-botBlue to-botBlue-dark text-white font-medium shadow-lg shadow-botBlue/25 btn-glow w-full"
               >
                 Join Support Server
-              </Button>
+              </Button></a>
             </div>
             
             {/* Support Option 2 */}
@@ -166,7 +166,7 @@ const Support = () => {
             <div className="glass-card rounded-xl p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-semibold mb-4">Video Tutorials</h3>
               <p className="text-muted-foreground mb-6">
-                Watch step-by-step video guides on setting up and using Discord Bot - All In One.
+                Watch step-by-step video guides on setting up and using Velox Bot.
               </p>
               <div className="rounded-lg overflow-hidden bg-gray-800 aspect-video flex items-center justify-center">
                 <div className="text-white">Video Thumbnail</div>

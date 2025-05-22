@@ -15,11 +15,11 @@ const SetupGuide = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Get Started with
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-botBlue to-botBlue-dark ml-2">
-                Discord Bot
+                Velox Bot
               </span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Follow this step-by-step guide to add and configure Discord Bot - All In One to your server.
+              Follow this step-by-step guide to add and configure Velox Bot to your server.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const SetupGuide = () => {
                   Invite the Bot
                 </h2>
                 <p className="mb-6">
-                  First, you'll need to invite Discord Bot - All In One to your server. Click the button below to start the invitation process.
+                  First, you'll need to invite Velox Bot to your server. Click the button below to start the invitation process.
                 </p>
                 
                 <div className="flex flex-col gap-8">
@@ -57,11 +57,11 @@ const SetupGuide = () => {
                       <p className="text-muted-foreground mb-4">
                         Click the button below to open Discord's OAuth2 authorization page.
                       </p>
-                      <Button
+                      <a href="https://discord.com/oauth2/authorize?client_id=1373572495013052468&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer"><Button
                         className="bg-gradient-to-r from-botBlue to-botBlue-dark text-white font-medium shadow-lg btn-glow"
                       >
                         Invite Bot
-                      </Button>
+                      </Button></a>
                     </div>
                   </div>
                   
@@ -107,7 +107,7 @@ const SetupGuide = () => {
                         Review the permissions that the bot requires to function properly and click "Authorize" to continue.
                       </p>
                       <div className="glass-card rounded-lg p-4 bg-gray-800 text-white">
-                        <p className="text-center mb-2">Discord Bot - All In One would like permission to:</p>
+                        <p className="text-center mb-2">Velox Bot would like permission to:</p>
                         <ul className="space-y-2 mb-4">
                           <li className="flex items-center">
                             <Check className="mr-2 h-4 w-4 text-green-400" /> 
@@ -159,7 +159,7 @@ const SetupGuide = () => {
                             <span>Highest</span>
                           </div>
                           <div className="flex justify-between p-2 bg-botBlue/80 text-white rounded">
-                            <span>Discord Bot - All In One</span>
+                            <span>Velox Bot</span>
                             <span>↑ This should be high in the list</span>
                           </div>
                           <div className="flex justify-between p-2 bg-gray-700 text-white rounded">
@@ -307,7 +307,7 @@ const SetupGuide = () => {
                   Start Using Commands
                 </h2>
                 <p className="mb-6">
-                  You're all set up! Here are some basic commands to get you started with Discord Bot - All In One.
+                  You're all set up! Here are some basic commands to get you started with Velox Bot.
                 </p>
                 
                 <div className="space-y-6">

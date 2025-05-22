@@ -55,9 +55,9 @@ const Home = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-botBlue to-botBlue-dark">
-                All-In-One
+                Velox Bot
               </span>{" "}
-              Discord Bot
+              by Fast Studios
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               A powerful, feature-rich bot designed to enhance your Discord server with moderation tools, utilities, games, logging, and more.
@@ -90,33 +90,31 @@ const Home = () => {
                   <div className="w-3 h-3 rounded-full bg-green-500" />
                 </div>
                 <div className="flex-1 text-center text-white text-sm font-medium">
-                  Discord Bot - All In One
+                  Velox Bot
                 </div>
               </div>
               <div className="p-4 bg-gray-800 text-white">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-botBlue flex items-center justify-center">
-                    <Bot className="w-6 h-6" />
-                  </div>
+                  <img src="/logo.png" alt="Velox Bot Logo" className="h-8 w-8 rounded-full" />
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="font-semibold text-botBlue">Discord Bot</span>
+                      <span className="font-semibold text-botBlue">Velox Bot</span>
                       <span className="text-xs text-gray-400">Today at 12:30 PM</span>
                     </div>
                     <div className="mt-1 text-sm">
-                      Hello! I'm your new All-In-One bot. Type <span className="bg-gray-700 px-1 rounded">/help</span> to see what I can do!
+                      Hello! I'm Velox. Type <span className="bg-gray-700 px-1 rounded">/help</span> to see what I can do!
                     </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-purple-500"></div>
+                  <img src="/user.jpg" alt="User" className="h-10 w-10 rounded-full" />
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="font-semibold">User</span>
                       <span className="text-xs text-gray-400">Today at 12:31 PM</span>
                     </div>
                     <div className="mt-1 text-sm">
-                      /help
+                      Hey Velox! Can you help me with something?
                     </div>
                   </div>
                 </div>
@@ -189,15 +187,15 @@ const Home = () => {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="animate-on-scroll opacity-0" style={{animationDelay: "0.1s"}}>
-              <div className="text-4xl font-bold text-botBlue mb-2">10K+</div>
+              <div className="text-4xl font-bold text-botBlue mb-2">10+</div>
               <p className="text-muted-foreground">Servers</p>
             </div>
             <div className="animate-on-scroll opacity-0" style={{animationDelay: "0.2s"}}>
-              <div className="text-4xl font-bold text-botBlue mb-2">2M+</div>
+              <div className="text-4xl font-bold text-botBlue mb-2">160K+</div>
               <p className="text-muted-foreground">Users Reached</p>
             </div>
             <div className="animate-on-scroll opacity-0" style={{animationDelay: "0.3s"}}>
-              <div className="text-4xl font-bold text-botBlue mb-2">50+</div>
+              <div className="text-4xl font-bold text-botBlue mb-2">150+</div>
               <p className="text-muted-foreground">Commands</p>
             </div>
             <div className="animate-on-scroll opacity-0" style={{animationDelay: "0.4s"}}>
@@ -217,22 +215,23 @@ const Home = () => {
           <div className="max-w-3xl mx-auto glass-card rounded-2xl p-8 md:p-12 text-center animate-on-scroll opacity-0">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to transform your server?</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Invite Discord Bot - All In One to your server today and unlock all premium features for free.
+              Invite Velox Bot to your server today and unlock all premium features for free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
+             <a href="https://discord.com/oauth2/authorize?client_id=1373572495013052468&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer"><Button
                 size="lg"
                 className="bg-gradient-to-r from-botBlue to-botBlue-dark text-white font-medium shadow-lg shadow-botBlue/25 btn-glow"
               >
                 Add to Discord
-              </Button>
+              </Button></a>
+              <a href="https://discord.gg/faststudios" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg" 
                 variant="outline"
                 className="neon-border"
               >
                 Join Support Server
-              </Button>
+              </Button></a>
             </div>
           </div>
         </div>

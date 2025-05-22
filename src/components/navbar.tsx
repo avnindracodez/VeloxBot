@@ -24,7 +24,6 @@ export function Navbar() {
     { to: "/docs", label: "Documentation" },
     { to: "/setup", label: "Setup Guide" },
     { to: "/support", label: "Support" },
-    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -38,12 +37,11 @@ export function Navbar() {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-botBlue to-botBlue-dark animate-pulse-glow"></div>
-          <span className="font-poppins font-bold text-xl">
-            Discord Bot
-          </span>
+          <img src="/logo.png" alt="Velox Bot Logo" className="h-8 w-8 rounded-full" />
+          <span className="font-poppins font-bold text-xl">Velox Bot</span>
         </Link>
-        
+
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -56,12 +54,12 @@ export function Navbar() {
             </Link>
           ))}
           <ThemeToggle />
-          <Button
+          <a href="https://discord.com/oauth2/authorize?client_id=1373572495013052468&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer"><Button
             size="sm"
             className="bg-gradient-to-r from-botBlue to-botBlue-dark text-white shadow-lg btn-glow"
           >
             Invite Bot
-          </Button>
+          </Button></a>
         </nav>
 
         {/* Mobile Navigation Toggle */}

@@ -10,13 +10,13 @@ import { cn } from "@/lib/utils";
 const documentationData = {
   "Getting Started": {
     "Introduction": `
-# Introduction to Discord Bot - All In One
+# Introduction to Velox Bot
 
-Welcome to the official documentation for Discord Bot - All In One. This documentation will help you understand and utilize the full power of our bot in your Discord server.
+Welcome to the official documentation for Velox Bot. This documentation will help you understand and utilize the full power of our bot in your Discord server.
 
-## What is Discord Bot - All In One?
+## What is Velox Bot
 
-Discord Bot - All In One is a feature-rich Discord bot designed to provide server administrators with a comprehensive suite of tools for moderation, utility, fun, and more. Whether you're running a small community server or a large public one, our bot can help you manage and enhance your Discord experience.
+Velox Bot is a feature-rich Velox Bot designed to provide server administrators with a comprehensive suite of tools for moderation, utility, fun, and more. Whether you're running a small community server or a large public one, our bot can help you manage and enhance your Discord experience.
 
 ## Key Features
 
@@ -28,7 +28,7 @@ Discord Bot - All In One is a feature-rich Discord bot designed to provide serve
 
 ## Getting Started
 
-To get started with Discord Bot - All In One, you'll need to:
+To get started with Velox Bot, you'll need to:
 
 1. [Invite the bot](/setup) to your server
 2. Set up permissions and configurations
@@ -39,7 +39,7 @@ Explore the sidebar to learn more about specific features and commands.
     "Quick Start Guide": `
 # Quick Start Guide
 
-This guide will help you get Discord Bot - All In One up and running on your server in just a few minutes.
+This guide will help you get Velox Bot up and running on your server in just a few minutes.
 
 ## Step 1: Invite the Bot
 
@@ -61,7 +61,7 @@ This will guide you through the initial configuration process, including:
 
 ## Step 3: Explore Commands
 
-Discord Bot - All In One uses slash commands. To see all available commands, type:
+Velox Bot uses slash commands. To see all available commands, type:
 
 \`\`\`
 /help
@@ -73,14 +73,14 @@ Discord Bot - All In One uses slash commands. To see all available commands, typ
 - Read the [Documentation](/docs) to understand specific commands
 - Join our [Support Server](/support) if you need help
 
-Welcome to the Discord Bot - All In One community!
+Welcome to the Velox Bot community!
     `,
   },
   "Moderation": {
     "Basic Commands": `
 # Basic Moderation Commands
 
-Moderation is one of the core functionalities of Discord Bot - All In One. Here are the basic moderation commands you can use:
+Moderation is one of the core functionalities of Velox Bot. Here are the basic moderation commands you can use:
 
 ## User Management Commands
 
@@ -156,7 +156,7 @@ Sets the slowmode delay for the current channel.
     "Advanced Settings": `
 # Advanced Moderation Settings
 
-Discord Bot - All In One offers advanced moderation features for server administrators who want more control over their communities.
+Velox Bot offers advanced moderation features for server administrators who want more control over their communities.
 
 ## Auto-Moderation
 
@@ -247,7 +247,7 @@ Bans a user for a specified duration, then automatically unbans them.
     "Role Management": `
 # Role Management
 
-Discord Bot - All In One provides comprehensive role management features to help you organize your server's permission structure.
+Velox Bot provides comprehensive role management features to help you organize your server's permission structure.
 
 ## Basic Role Commands
 
@@ -354,7 +354,7 @@ Removes a reaction role from a message.
     "Embeds & Messages": `
 # Embeds & Messages
 
-Discord Bot - All In One allows you to create rich, customized embeds for announcements, rules, and other important messages.
+Velox Bot allows you to create rich, customized embeds for announcements, rules, and other important messages.
 
 ## Creating Embeds
 
@@ -694,7 +694,7 @@ Selects new winners for a completed giveaway.
     "Setup & Configuration": `
 # Logging Setup & Configuration
 
-Discord Bot - All In One includes a comprehensive logging system that can track various activities in your server.
+Velox Bot includes a comprehensive logging system that can track various activities in your server.
 
 ## Basic Setup
 
@@ -816,62 +816,62 @@ const Documentation = () => {
     }
   };
   
-  // Function to render markdown
   const renderMarkdown = (markdown: string) => {
-    // Simple markdown rendering implementation
-    // For a real app, use a library like react-markdown
-    
-    return (
-      <div className="markdown">
-        {markdown.split('\n').map((line, index) => {
-          // Headers
-          if (line.startsWith('# ')) {
-            return <h1 key={index} className="text-3xl font-bold mt-8 mb-4">{line.substring(2)}</h1>;
-          }
-          if (line.startsWith('## ')) {
-            return <h2 key={index} className="text-2xl font-semibold mt-6 mb-3">{line.substring(3)}</h2>;
-          }
-          if (line.startsWith('### ')) {
-            return <h3 key={index} className="text-xl font-semibold mt-5 mb-2">{line.substring(4)}</h3>;
-          }
-          
-          // Code blocks
-          if (line.startsWith('```')) {
-            const codeBlock = [] as string[];
-            let i = index + 1;
-            while (i < markdown.split('\n').length && !markdown.split('\n')[i].startsWith('```')) {
-              codeBlock.push(markdown.split('\n')[i]);
-              i++;
-            }
-            return (
-              <div key={index} className="bg-gray-800 rounded-md p-4 my-4 overflow-x-auto">
-                <pre className="text-gray-100">
-                  <code>{codeBlock.join('\n')}</code>
-                </pre>
-              </div>
-            );
-          }
-          if (markdown.split('\n')[index - 1]?.startsWith('```') || 
-              markdown.split('\n')[index + 1]?.startsWith('```')) {
-            return null; // Skip the code block delimiters themselves
-          }
-          
-          // Lists
-          if (line.startsWith('- ')) {
-            return <li key={index} className="ml-6 mb-1">{line.substring(2)}</li>;
-          }
-          
-          // Line break or paragraph
-          if (line.trim() === '') {
-            return <div key={index} className="h-4"></div>;
-          }
-          
-          // Default paragraph
-          return <p key={index} className="mb-4">{line}</p>;
-        })}
-      </div>
-    );
-  };
+  const lines = markdown.split('\n');
+  const elements: JSX.Element[] = [];
+
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Skip code block delimiters
+    if (line.startsWith('```')) {
+      const codeBlock: string[] = [];
+      i++;
+      while (i < lines.length && !lines[i].startsWith('```')) {
+        codeBlock.push(lines[i]);
+        i++;
+      }
+      elements.push(
+        <div key={i} className="bg-gray-800 rounded-md p-4 my-4 overflow-x-auto">
+          <pre className="text-gray-100">
+            <code>{codeBlock.join('\n')}</code>
+          </pre>
+        </div>
+      );
+      i++; // Skip closing ```
+      continue;
+    }
+
+    // Headings
+    if (line.startsWith('### ')) {
+      elements.push(<h3 key={i} className="text-xl font-semibold mt-5 mb-2">{line.substring(4)}</h3>);
+    } else if (line.startsWith('## ')) {
+      elements.push(<h2 key={i} className="text-2xl font-semibold mt-6 mb-3">{line.substring(3)}</h2>);
+    } else if (line.startsWith('# ')) {
+      elements.push(<h1 key={i} className="text-3xl font-bold mt-8 mb-4">{line.substring(2)}</h1>);
+    } else if (line.startsWith('- ')) {
+      elements.push(<li key={i} className="ml-6 mb-1">{line.substring(2)}</li>);
+    } else if (line.trim() === '') {
+      elements.push(<div key={i} className="h-4" />);
+    } else {
+      // Handle **bold**, *italic*, and `inline code` inside paragraphs
+      let parsedLine = line
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/`(.*?)`/g, '<code>$1</code>');
+
+      elements.push(
+        <p key={i} className="mb-4" dangerouslySetInnerHTML={{ __html: parsedLine }} />
+      );
+    }
+
+    i++;
+  }
+
+  return <div className="markdown">{elements}</div>;
+};
+
 
   return (
     <div className="pt-20">

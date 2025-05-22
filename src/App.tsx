@@ -13,7 +13,6 @@ import Features from "./pages/Features";
 import Documentation from "./pages/Documentation";
 import SetupGuide from "./pages/SetupGuide";
 import Support from "./pages/Support";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 // Create a new QueryClient instance
@@ -42,7 +41,6 @@ const App = () => (
                 <Route path="/docs" element={<Documentation />} />
                 <Route path="/setup" element={<SetupGuide />} />
                 <Route path="/support" element={<Support />} />
-                <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
